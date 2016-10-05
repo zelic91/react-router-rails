@@ -1,4 +1,4 @@
-module React
+module Zreact
   module Router
     module Rails
       module ViewHelper
@@ -7,7 +7,7 @@ module React
           if options[:prerender_location]
             fail "Server rendering doesn't work with HashLocation" if location == 'HashLocation'
             block = Proc.new do
-              concat React::Router::Renderer.render(routes, options[:prerender_location], args)
+              concat Zreact::Router::Renderer.render(routes, options[:prerender_location], args)
             end
           end
 

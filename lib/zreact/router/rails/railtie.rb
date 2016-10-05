@@ -1,6 +1,6 @@
 require 'rails'
 
-module React
+module Zreact
   module Router
     module Rails
       class Railtie < ::Rails::Railtie
@@ -16,7 +16,7 @@ module React
         # Include the react-router-rails view helper lazily
         initializer "react_router_rails.setup_view_helpers", group: :all do |app|
           ActiveSupport.on_load(:action_view) do
-            include ::React::Router::Rails::ViewHelper
+            include ::Zreact::Router::Rails::ViewHelper
           end
         end
 
@@ -29,7 +29,7 @@ module React
 
           do_setup = lambda do
             cfg = app.config.react_router
-            React::Router::Renderer.setup!(cfg.react_js, cfg.react_server_js, cfg.react_router_js, cfg.routes_js,
+            Zreact::Router::Renderer.setup!(cfg.react_js, cfg.react_server_js, cfg.react_router_js, cfg.routes_js,
                                            {:size => cfg.max_renderers, :timeout => cfg.timeout})
           end
 

@@ -1,16 +1,16 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'react/router/rails/version'
+require 'zreact/router/rails/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "react-router-rails"
-  spec.version       = React::Router::Rails::VERSION
-  spec.authors       = ["Mario Peixoto"]
-  spec.email         = ["mario.peixoto@gmail.com"]
+  spec.name          = "zreact-router-rails"
+  spec.version       = Zreact::Router::Rails::VERSION
+  spec.authors       = ["Thuong Nguyen"]
+  spec.email         = ["thuongnh.uit@gmail.com"]
   spec.summary       = %q{A gem for distribution of the react-router using the asset pipeline}
   spec.description   = %q{React-Router for Rails Asset Pipeline}
-  spec.homepage      = "https://github.com/mariopeixoto/react-router-rails"
+  spec.homepage      = "https://github.com/zelic91/react-router-rails"
   spec.license       = "MIT"
 
   spec.files = Dir['{lib,vendor}/**/*', 'LICENSE', 'README.md']
@@ -20,5 +20,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake", "~> 10.0"
 
   spec.add_dependency 'rails', '>= 3.1'
-  spec.add_dependency 'react-rails', '~> 1.4'
+  spec.add_dependency 'react-rails', '>= 1.4'
 end

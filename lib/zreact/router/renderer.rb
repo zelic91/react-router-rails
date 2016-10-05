@@ -1,6 +1,6 @@
 require 'connection_pool'
 
-module React
+module Zreact
   module Router
     class Renderer
       class PrerenderError < RuntimeError
@@ -42,7 +42,7 @@ module React
       end
 
       def render(routes, location, args={})
-        react_props = React::Router::Renderer.react_props(args)
+        react_props = Zreact::Router::Renderer.react_props(args)
         jscode = <<-JS
           function() {
             var str = '';

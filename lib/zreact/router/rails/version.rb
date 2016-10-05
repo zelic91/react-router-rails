@@ -1,7 +1,7 @@
-module React
+module Zreact
   module Router
     module Rails
-      VERSION = "0.13.3.2"
+      VERSION = "2.8.1"
     end
   end
 end

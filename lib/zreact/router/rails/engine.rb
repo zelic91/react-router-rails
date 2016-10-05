@@ -1,4 +1,4 @@
-module React
+module Zreact
   module Router
     module Rails
       class Engine < ::Rails::Engine
